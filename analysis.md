@@ -2,22 +2,22 @@
 
 ## 1. Score Distribution
 
-The wallet credit scores are normalized to cover the full 0–1000 range. Below is the distribution of wallet scores (number of wallets in each 100-point bin):
+The machine learning-based wallet scores are normalized to cover the full 0–1000 range. Below is the distribution of wallet scores (number of wallets in each 100-point bin):
 
 | Score Range   | Number of Wallets |
 |--------------|-------------------|
-| 0–100        | 240               |
-| 100–200      | 33                |
-| 200–300      | 2266              |
-| 300–400      | 38                |
-| 400–500      | 43                |
-| 500–600      | 47                |
-| 600–700      | 74                |
-| 700–800      | 51                |
-| 800–900      | 52                |
-| 900–1000     | 652               |
+| 0–100        | 2746              |
+| 100–200      | 8                 |
+| 200–300      | 1                 |
+| 300–400      | 1                 |
+| 400–500      | 1                 |
+| 500–600      | 0                 |
+| 600–700      | 1                 |
+| 700–800      | 0                 |
+| 800–900      | 8                 |
+| 900–1000     | 731               |
 
-The plot `score_distribution.png` visualizes this distribution. This bar chart provides a visual summary of how wallet credit scores are distributed across the 0–1000 range, making it easy to spot clusters of responsible and risky users.
+The plot `score_distribution.png` visualizes this distribution. This bar chart provides a visual summary of how machine learning-based wallet scores are distributed across the 0–1000 range, making it easy to spot clusters of responsible and risky users.
 
 ---
 
@@ -32,7 +32,7 @@ The plot `score_distribution.png` visualizes this distribution. This bar chart p
 ### Behavior of Wallets in the Higher Range (900–1000)
 - **Regular deposits:** Consistent supply of assets to the protocol demonstrates reliability.
 - **Full or high ratio of repayments to borrows:** These wallets repay what they borrow, showing responsible usage.
-- **No or very few liquidations:** Indicates good risk management and avoidance of exploitative practices using credit_scorer.py.
+- **No or very few liquidations:** Indicates good risk management and avoidance of exploitative practices using ml_credit_scorer.py.
 - **Longer active duration:** High scorers tend to have a sustained, ongoing relationship with the protocol.
 - **Responsible and consistent protocol usage:** These wallets behave in a way that benefits both themselves and the protocol ecosystem.
 
@@ -72,4 +72,4 @@ The plot `score_distribution.png` visualizes this distribution. This bar chart p
 
 ## Conclusion
 
-The scoring system successfully distinguishes between responsible and risky wallet behaviors, with higher scores for reliable users and lower scores for risky or exploitative usage. The normalization step ensures the entire 0–1000 range is used for clear interpretation.
+The machine learning model used for scoring is a Random Forest classifier. Random Forest was chosen for its robustness, interpretability, and strong performance on tabular data such as engineered wallet features. The model successfully distinguishes between responsible and risky wallet behaviors, with higher scores for reliable users and lower scores for risky or exploitative usage. The normalization step ensures the entire 0–1000 range is used for clear interpretation.
