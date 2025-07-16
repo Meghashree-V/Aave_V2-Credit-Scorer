@@ -135,7 +135,7 @@ This project assigns a credit score (0–1000) to each wallet address based on t
 ## Machine Learning Methodology
 
 **Model Choice:**
-- For this internship submission, I have chosen a Random Forest classifier. Random Forest is a widely accepted, robust, and interpretable model for tabular data like DeFi wallet features. I selected it because it balances predictive power with transparency and ease of explanation, which is especially important for technical assessments.
+- I have chosen a Random Forest classifier. Random Forest is a widely accepted, robust, and interpretable model for tabular data like DeFi wallet features. I selected it because it balances predictive power with transparency and ease of explanation, which is especially important for technical assessments.
 - **Note:** Random Forest is a strong, industry-standard choice for credit scoring and tabular ML tasks. It is well-suited for both small and medium datasets, provides feature importance for interpretability, and is commonly used in real-world risk assessment systems. For future improvements, more advanced models (like LightGBM/XGBoost) can be explored, but Random Forest is an excellent baseline for this project.
 
 **Feature Engineering:**
@@ -153,7 +153,7 @@ This project assigns a credit score (0–1000) to each wallet address based on t
 
 ## How to Use
 
-1. Place your `user-wallet-transactions.json` file in the `data/` directory.
+1. Place your `user-wallet-transactions.json` file in the root directory.
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
